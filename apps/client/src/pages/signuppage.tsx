@@ -5,8 +5,15 @@ export default function SignupPage(){
     return(
         <div>
             hulo
-            {/* <Inputbox/> */}
-            <Signup/>
+            <Signup onClickfun={async (email,password) => {
+                alert(email)
+                alert(password)
+                // const response = await axios.post("admin.kirat.com/signup",{
+                //     email,
+                //     password
+                // })
+
+            }}/>
         </div>
     )
 }
