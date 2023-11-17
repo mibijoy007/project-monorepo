@@ -1,18 +1,17 @@
 import * as React from "react"
 import { Inputbox, Signup } from "ui"
+import axios from "axios"
 
 export default function SignupPage(){
     return(
         <div>
             hulo
             <Signup onClickfun={async (email,password) => {
-                alert(email)
-                alert(password)
-                // const response = await axios.post("admin.kirat.com/signup",{
-                //     email,
-                //     password
-                // })
-
+                const response = await axios.post("/api/signupback",{
+                    email,
+                    password
+                })
+                localStorage.setItem("token",response.data.token)
             }}/>
         </div>
     )

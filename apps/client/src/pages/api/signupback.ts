@@ -18,8 +18,9 @@ export default  async function handler(
     // const password = req.body.password;
 
     await ensureDbConnected(); //dbline added (mongoose.connect)
-    const { username, password } = req.body;
-    const email = username;
+    const { email, password } = req.body;
+    const username = email;
+
     const admin = await Admin.findOne({ username });
 
     // function callback(admin) {
