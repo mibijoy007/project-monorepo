@@ -17,6 +17,7 @@ export const courseDetails = selector({
     const state = get(courseState);
 
     return state.course;
+    //d
   },
 });
 
